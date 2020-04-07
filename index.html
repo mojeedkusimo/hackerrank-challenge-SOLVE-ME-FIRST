@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackerrank Challenge | Solve Me First</title>
+</head>
+<style>
+    p {
+        border: black 2px solid;
+        width: 10%;
+        height: 2vw;
+    }
+</style>
+<body>
+    <h1>The purpose of this project is to take two numbers and provide their sum (addition)</h1>
+    <h3>Enter the numbers you want to add below:</h3>
+    <input type="number" name="" id="firstnumber"> + <input type="number" name="" id="secondnumber"><br><br>
+    <button onclick="getValue()">Calculate</button><br><br>
+     <span>Answer = </span><span id="solution"></span>
+    <script>
+
+        // function returns the sum of the first number and second number
+        function sum(firstNumber,secondNumber) {
+
+            return firstNumber + secondNumber;
+        }
+
+        function getValue() {
+            // Number() converts string type from input to number type
+            let firstNumber = Number(document.getElementById('firstnumber').value);
+            let secondNumber = Number(document.getElementById('secondnumber').value);
+
+            document.getElementById('solution').innerHTML = sum(firstNumber,secondNumber);
+        }
+    </script>
+</body>
+</html>
